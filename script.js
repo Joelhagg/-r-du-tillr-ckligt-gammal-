@@ -1,16 +1,18 @@
-function check(){
-    var age;
-    age = Number(document.getElementById("age").value);
+console.log("test");
 
-    if(age < 18) {
-       alert("Du är ju inte ens 18......");
-    }
+let button = document.getElementById("button");
+button.innerText = "Are you old enough?";
 
-    else if(age > 65) {
-        alert("Tyvärr men du är för gammal för den här sidan!")
-    }
+button.addEventListener("click", () => {
+  let input = document.getElementById("input").value;
 
-    else{
-       alert("Du är tillräckligt gammal, du får komma in!!!");
-    }
-}
+  if (input < 18) {
+    alert("To young to drink, comeback when you are 18!");
+  } else if (input >= 65) {
+    alert("Aren't you to old to drink here?");
+  } else if (input == 18) {
+    alert("congratiolation on beeing 18, drink on!!!");
+  } else if (input > 18) {
+    alert("Come in and drink all you want!");
+  }
+});
